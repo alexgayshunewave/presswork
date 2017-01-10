@@ -6,14 +6,14 @@ var rename = require('gulp-rename');
 var webserver = require('gulp-webserver');
 
 gulp.task('sass', function() {
-  gulp.src('./assets/sass/letterpress.scss')
+  gulp.src('./assets/sass/styles.scss')
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('./assets/css/'));
 });
 
 gulp.task('css', function() {
-  gulp.src('./assets/css/letterpress.css')
+  gulp.src('./assets/css/styles.css')
     .pipe(cleanCSS())
     .pipe(rename({
       extname: '.min.css'
