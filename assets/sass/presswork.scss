@@ -4,7 +4,6 @@
 @import "../../bower_components/modular-scale/stylesheets/modular-scale";
 
 // Import Sassline base SCSS files in order so variables are read correctly.
-@import "classes/reset";
 @import "base/variables";
 @import "base/modular-scale";
 @import "presswork/functions";
