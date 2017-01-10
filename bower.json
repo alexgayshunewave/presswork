@@ -1,0 +1,22 @@
+{
+  "name": "presswork",
+  "homepage": "https://github.com/ie/letterpress",
+  "authors": [
+    "David Johnson <david.johnson@ie.com.au>"
+  ],
+  "description": "Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.",
+  "keywords": [
+    "sass",
+    "baseline",
+    "boilerplate",
+    "modular-scale"
+  ],
+  "main": "assets/sass/letterpress/*.scss",
+  "ignore": [
+    "**/.*"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "modular-scale": "^2.1.3"
+  }
+}

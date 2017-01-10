@@ -1,0 +1,5 @@
+{
+  "name": "Letterpress",
+  "description": "Set text on the web to a baseline grid with Sass & REMs using a responsive modular-scale.",
+  "tags": ["starting-point", "type", "typography", "vertical-rhythm", "media-queries", "breakpoints", "responsive", "mixins"]
+}
