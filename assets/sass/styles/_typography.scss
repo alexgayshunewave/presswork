@@ -37,32 +37,32 @@ body {
 
   // Heading level 1.
   h1, .zetta {
-    @include sassline($fontsize: zetta, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+    @include pw($fontsize: zetta, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
   }
 
   // Heading level 2.
   h2, .exa {
-    @include sassline(exa, $headingtype, 3, 1, all);
+    @include pw(exa, $headingtype, 3, 1, all);
   }
 
   // Heading level 3.
   h3, .peta {
-    @include sassline(peta, $headingtype, 3, 1, all);
+    @include pw(peta, $headingtype, 3, 1, all);
   }
 
   // Heading level 4.
   h4, .tera {
-    @include sassline(tera, $headingtype, 2, 0, all);
+    @include pw(tera, $headingtype, 2, 0, all);
   }
 
   // Heading level 5.
   h5, .giga {
-    @include sassline(giga, $headingtype, 2, 0, all);
+    @include pw(giga, $headingtype, 2, 0, all);
   }
 
   // Heading level 6.
   h6, .base {
-    @include sassline(base, $headingtype, 2, 0, all);
+    @include pw(base, $headingtype, 2, 0, all);
   }
 
   // Lists.
@@ -73,7 +73,7 @@ body {
       font-feature-settings: 'kern', 'onum', 'liga';
       margin-left: 2rem;
 
-      @include breakpoint(break-1) {
+      @include bp(break-1) {
         margin-left: 0;
       }
 
@@ -164,7 +164,7 @@ body {
       font-feature-settings: 'kern', 'onum', 'liga';
       margin-left: 2rem;
 
-      @include breakpoint(break-1) {
+      @include bp(break-1) {
         margin-left: 0;
       }
     }
@@ -180,7 +180,7 @@ body {
 
   // Tables.
   table {
-    @include sassline(kilo, $headingtype, 2, 0, all);
+    @include pw(kilo, $headingtype, 2, 0, all);
 
     font-family: unquote(map-get($headingtype, font-family));
     font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
@@ -191,7 +191,7 @@ body {
     thead {
 
       th {
-        @include sassline(base, $headingtype, 2, 0, all);
+        @include pw(base, $headingtype, 2, 0, all);
         padding-bottom: 1px;
       }
     }
@@ -264,7 +264,7 @@ body {
       }
     }
 
-    @include breakpoint(break-1) {
+    @include bp(break-1) {
       margin-left: -1rem;
     }
   }

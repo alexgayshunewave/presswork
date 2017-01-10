@@ -16,7 +16,7 @@ $max-widths: map-values($maxwidths);
 // Breakpoints. Either set one to one of the breakpoint variables, or use a custom value for minor breakpoints.
 // Defaults to min-width, but both min->max and max-width are available too.
 // Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7
-@mixin breakpoint($break: 0, $max: 0) {
+@mixin bp($break: 0, $max: 0) {
   // Type of break variable
   $value: type-of($break);
 
@@ -323,7 +323,7 @@ $max-widths: map-values($maxwidths);
 }
 
 // Set fontsize and baseline at once. Mix of fontsize and baseline mixin.
-@mixin sassline($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0) {
+@mixin pw($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0) {
   $font-value: type-of($fontsize);
   $break-value: type-of($breakpoint);
   $cap-height: map-get($font, cap-height);
