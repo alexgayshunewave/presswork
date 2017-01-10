@@ -4,14 +4,14 @@
   "authors": [
     "David Johnson <david.johnson@ie.com.au>"
   ],
-  "description": "Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.",
+  "description": "Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale. Based on Sassline.",
   "keywords": [
     "sass",
     "baseline",
     "boilerplate",
     "modular-scale"
   ],
-  "main": "assets/sass/letterpress/*.scss",
+  "main": "assets/sass/presswork/presswork.scss",
   "ignore": [
     "**/.*"
   ],
