@@ -6,19 +6,19 @@ var rename = require('gulp-rename');
 var webserver = require('gulp-webserver');
 
 gulp.task('sass', function() {
-  gulp.src('./assets/sass/styles.scss')
+  gulp.src('src/sass/styles.scss')
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('./assets/css/'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('css', function() {
-  gulp.src('./assets/css/styles.css')
+  gulp.src('dist/css/styles.css')
     .pipe(cleanCSS())
     .pipe(rename({
       extname: '.min.css'
     }))
-    .pipe(gulp.dest('./assets/css/'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('serve', function() {
@@ -30,5 +30,5 @@ gulp.task('serve', function() {
 });
 
 gulp.task('default', ['sass', 'css', 'serve'], function() {
-  gulp.watch(['./assets/sass/*.scss', './assets/sass/**/*.scss'], ['sass', 'css']);
+  gulp.watch(['src/sass/**/*.scss'], ['sass', 'css']);
 });
