@@ -18,7 +18,7 @@ Presswork works by setting the root font-size as half the line-height of the sta
 
 ## Documentation
 
-Presswork is fully commented with details in the SCSS. Set the font sizes with the `fontsize` mixin, set the spacing using the `baseline` mixin or set both at once with the `sassline` mixin. Use rems for everything else. Full documentation is in the works.
+Presswork is fully commented with details in the SCSS. Set the font sizes with the `fontsize` mixin, set the spacing using the `baseline` mixin or set both at once with the `pw` mixin. Use rems for everything else. Full documentation is in the works.
 
 ### Running / compiling
 
@@ -37,7 +37,7 @@ The pages will run at http://localhost:1234/
 
 ### Sass file structure
 
-My preferred method is to work along the lines of the SMACSS & BEM method. In the sass folder there there are two folders — sassline-base and modules. The base folder has the Presswork base SCSS partials. The modules folder contains some demo SCSS partials with styles you can keep or remove. All new partials should be added to the modules folder and referenced in `style.scss` to be compiled into your CSS.
+To include Presswork simply use `@import presswork.scss`. If you want to use the boilerplate/demo CSS, import both presswork.scss and styles.scss.
 
 ### More on information on using Presswork
 
