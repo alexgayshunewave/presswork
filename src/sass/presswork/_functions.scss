@@ -32,7 +32,7 @@
 }
 
 // Gets the value of 1 gridline as rems
-@mixin pw-grid-height($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0) {
+@function pw-grid-height($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0) {
 	$grid-height: 1rem;
 	$font-value: type-of($fontsize);
 	$break-value: type-of($breakpoint);
