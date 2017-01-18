@@ -140,14 +140,6 @@ $max-widths: map-values($maxwidths);
 	}
 }
 
-// Value in scale in $modular-scale?
-// Used in following fontsize mixin.
-@function in-modular-scale($scale, $key) {
-	$map: map-get($modular-scale, $scale);
-	$output: map-has-key($map, $key);
-	@return $output;
-}
-
 // Font-size in rems. Either set per breakpoint or for all.
 // Use values as you would for pixels i.e. 16 or use values from the modular scale.
 @mixin fontsize($fontsize, $breakpoint: 0) {
