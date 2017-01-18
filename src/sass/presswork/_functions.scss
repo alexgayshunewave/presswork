@@ -30,34 +30,3 @@
 	$output: map-has-key($map, $key);
 	@return $output;
 }
-
-// Gets the value of 1 gridline as rems
-@function pw-grid-height($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0) {
-	$grid-height: 1;
-	$font-value: type-of($fontsize);
-	$break-value: type-of($breakpoint);
-	$cap-height: map-get($font, cap-height);
-	$in-scale: in-modular-scale(scale-0, $fontsize);
-
-	@if $break-value == number and $breakpoint <= ($breakpoints-limit - 1) and $breakpoint >= 0 {
-		@if $font-value == number {
-			$rootsize: nth($sizes, ($breakpoint + 1));
-			$baseline-shift: #{($fontsize / 2 * (($lineheight * $rootsize / $fontsize) - $cap-height)) / $rootsize + 0.00001};
-			$baseline-push: #{$below - (($fontsize / 2 * (($lineheight * $rootsize / $fontsize) - $cap-height)) / $rootsize + 0.00001)};
-			$grid-height: (($fontsize / nth($sizes, ($breakpoint + 1)))+($baseline-push)+($baseline-shift));
-		} @else if $in-scale == true {
-			$get-scale: map-get($modular-scale, scale-#{$breakpoint});
-			$get-size: map-get($get-scale, $fontsize);
-			$rootsize: nth($sizes, ($breakpoint + 1));
-			$baseline-shift: #{($get-size / 2 * (($lineheight * $rootsize / $get-size) - $cap-height)) / $rootsize + 0.00001};
-			$baseline-push: #{$below - (($get-size / 2 * (($lineheight * $rootsize / $get-size) - $cap-height)) / $rootsize + 0.00001)};
-			$grid-height: (($get-size / nth($sizes, ($breakpoint + 1)))+($baseline-push)+($baseline-shift));
-		} @else {
-			@warn "#{$fontsize} is not a valid scale variable";
-		}
-	} @else {
-		@warn "#{$breakpoint} is not valid to use as a breakpoint";
-	}
-
-	@return #{$grid-height}rem;
-}
