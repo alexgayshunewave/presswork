@@ -7,7 +7,11 @@ var webserver = require('gulp-webserver');
 
 gulp.task('sass', function() {
   gulp.src('src/sass/styles.scss')
-    .pipe(sass())
+    .pipe(sass(
+		{
+			includePaths: ['node_modules/']
+		}
+	))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dist/css/'));
 });
