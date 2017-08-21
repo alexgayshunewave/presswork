@@ -8,16 +8,24 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.1.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.2",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
     "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "modularscale-sass": "https://github.com/modularscale/modularscale-sass/tarball/v3.0.2"
   },
   "scripts": {
     "start": "gulp"
   },
-  "keywords": [ "sass", "baseline", "boilerplate", "modular-scale" ],
+  "keywords": [
+    "sass",
+    "baseline",
+    "boilerplate",
+    "modular-scale"
+  ],
   "author": "David Johnson <david.johnson@ie.com.au>",
-  "license" : "MIT"
+  "license": "MIT"
 }

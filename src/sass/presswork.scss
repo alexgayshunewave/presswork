@@ -1,7 +1,7 @@
 /* CSS compiled from SCSS. */
 /* --------------------------------------- */
 
-@import "../../bower_components/modular-scale/stylesheets/modular-scale";
+@import "../../node_modules/modularscale-sass/stylesheets/modularscale";
 
 // Import Presswork base SCSS files in order so variables are read correctly.
 @import "base/variables";

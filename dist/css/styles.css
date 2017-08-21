@@ -522,13 +522,15 @@ body {
       font-size: 0.81888rem; } }
 
 .typeset .upper {
-  font-kerning: normal;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
   letter-spacing: 0.1rem;
   text-transform: uppercase; }
 
 .typeset .small-caps {
   font-feature-settings: 'smcp', 'kern';
-  font-kerning: normal;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
   letter-spacing: 0.1rem; }
 
 .typeset .lining-numerals {
